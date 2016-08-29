@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureEraseVC">
+            <connections>
+                <outlet property="imgV" destination="ROg-xj-5D7" id="eqV-vD-Swc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2B" translatesAutoresizingMaskIntoConstraints="NO" id="brr-Xp-UDr">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2A" translatesAutoresizingMaskIntoConstraints="NO" id="ROg-xj-5D7">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="4Xa-4z-bc8" appends="YES" id="ubE-qh-jgc"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ROg-xj-5D7" secondAttribute="bottom" id="ESQ-Pt-f8A"/>
+                <constraint firstItem="brr-Xp-UDr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Kay-GY-ram"/>
+                <constraint firstItem="ROg-xj-5D7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="U6t-qe-yKU"/>
+                <constraint firstItem="ROg-xj-5D7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ui6-35-9Zm"/>
+                <constraint firstItem="brr-Xp-UDr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WBC-O1-hB1"/>
+                <constraint firstAttribute="bottom" secondItem="brr-Xp-UDr" secondAttribute="bottom" id="uk2-gZ-elr"/>
+                <constraint firstAttribute="trailing" secondItem="brr-Xp-UDr" secondAttribute="trailing" id="v4s-bh-ADe"/>
+                <constraint firstAttribute="trailing" secondItem="ROg-xj-5D7" secondAttribute="trailing" id="xK0-mB-ajG"/>
+            </constraints>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="4Xa-4z-bc8">
+            <connections>
+                <action selector="pan:" destination="-1" id="HBM-3l-ucK"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="2A" width="480" height="720"/>
+        <image name="2B" width="480" height="720"/>
+    </resources>
+</document>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureClipVC">
+            <connections>
+                <outlet property="imgV" destination="lsk-Z6-hTn" id="RRI-k2-PKR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="火影" translatesAutoresizingMaskIntoConstraints="NO" id="lsk-Z6-hTn">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="rSI-uD-ZNs" appends="YES" id="KU4-Ud-lTE"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lsk-Z6-hTn" secondAttribute="trailing" id="7IH-u7-0in"/>
+                <constraint firstAttribute="bottom" secondItem="lsk-Z6-hTn" secondAttribute="bottom" id="ZcR-z3-ASs"/>
+                <constraint firstItem="lsk-Z6-hTn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cKj-HI-1uz"/>
+                <constraint firstItem="lsk-Z6-hTn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p2W-ER-SZo"/>
+            </constraints>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="rSI-uD-ZNs">
+            <connections>
+                <action selector="pan:" destination="-1" id="ghd-ny-kgv"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="火影" width="600" height="960"/>
+    </resources>
+</document>

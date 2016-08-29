@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawingBoardVC">
+            <connections>
+                <outlet property="drawView" destination="mxG-xU-2Y4" id="u14-cd-Jnv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zV1-Wb-O9r" userLabel="顶部Toolbar">
+                    <rect key="frame" x="0.0" y="70" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="jvn-xj-8gZ"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="清屏" id="JWw-2y-8su">
+                            <connections>
+                                <action selector="clear:" destination="-1" id="pwM-dt-oSl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="撤销" id="Olp-cX-sXb">
+                            <connections>
+                                <action selector="undo:" destination="-1" id="Y04-m2-b8F"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="橡皮擦" id="gyI-PC-R6Q">
+                            <connections>
+                                <action selector="erase:" destination="-1" id="9K7-j4-YPn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="照片" id="WL0-Zv-7ho">
+                            <connections>
+                                <action selector="chosePic:" destination="-1" id="vVd-85-fqA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="BQz-Qo-XVI"/>
+                        <barButtonItem title="保存" id="amP-j4-V5c">
+                            <connections>
+                                <action selector="save:" destination="-1" id="ytA-30-O1H"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKv-jC-Yqd" userLabel="底部View">
+                    <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTH-ar-NCL">
+                            <rect key="frame" x="20" y="55" width="173" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.93853102960000001" blue="0.4941269855" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="setColor:" destination="-1" eventType="touchUpInside" id="xeS-8a-z8B"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHH-xY-3v9">
+                            <rect key="frame" x="407" y="55" width="173" height="30"/>
+                            <color key="backgroundColor" red="0.2755027598" green="0.67908182149999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="setColor:" destination="-1" eventType="touchUpInside" id="qxC-rp-a2p"/>
+                            </connections>
+                        </button>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="yrn-j4-aB2">
+                            <rect key="frame" x="38" y="17" width="524" height="31"/>
+                            <connections>
+                                <action selector="valueChange:" destination="-1" eventType="valueChanged" id="41D-Wx-2S9"/>
+                            </connections>
+                        </slider>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V7-UO-WtF">
+                            <rect key="frame" x="213" y="55" width="174" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.1626783332" blue="0.22249034340000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="setColor:" destination="-1" eventType="touchUpInside" id="j6h-c2-2YJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.4550003118" green="1" blue="0.35301057460000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="RHH-xY-3v9" firstAttribute="leading" secondItem="5V7-UO-WtF" secondAttribute="trailing" constant="20" id="81I-vJ-yFh"/>
+                        <constraint firstItem="GTH-ar-NCL" firstAttribute="leading" secondItem="VKv-jC-Yqd" secondAttribute="leading" constant="20" id="HjP-IG-QP6"/>
+                        <constraint firstAttribute="height" constant="100" id="LVG-sa-HLV"/>
+                        <constraint firstItem="yrn-j4-aB2" firstAttribute="leading" secondItem="VKv-jC-Yqd" secondAttribute="leading" constant="40" id="N7U-GE-eBr"/>
+                        <constraint firstItem="5V7-UO-WtF" firstAttribute="leading" secondItem="GTH-ar-NCL" secondAttribute="trailing" constant="20" id="QLg-JQ-tMl"/>
+                        <constraint firstItem="RHH-xY-3v9" firstAttribute="top" secondItem="GTH-ar-NCL" secondAttribute="top" id="TJa-op-2Wk"/>
+                        <constraint firstItem="5V7-UO-WtF" firstAttribute="width" secondItem="GTH-ar-NCL" secondAttribute="width" id="WIu-eA-bR8"/>
+                        <constraint firstItem="5V7-UO-WtF" firstAttribute="top" secondItem="GTH-ar-NCL" secondAttribute="top" id="WZG-a8-5gM"/>
+                        <constraint firstItem="RHH-xY-3v9" firstAttribute="height" secondItem="GTH-ar-NCL" secondAttribute="height" id="XXc-it-U6A"/>
+                        <constraint firstItem="5V7-UO-WtF" firstAttribute="leading" secondItem="GTH-ar-NCL" secondAttribute="trailing" constant="20" id="abb-D5-nK5"/>
+                        <constraint firstAttribute="trailing" secondItem="RHH-xY-3v9" secondAttribute="trailing" constant="20" id="dzu-rT-53Y"/>
+                        <constraint firstItem="RHH-xY-3v9" firstAttribute="width" secondItem="GTH-ar-NCL" secondAttribute="width" id="fgN-Me-2o3"/>
+                        <constraint firstItem="5V7-UO-WtF" firstAttribute="top" secondItem="yrn-j4-aB2" secondAttribute="bottom" constant="8" id="fl2-e2-sLn"/>
+                        <constraint firstAttribute="trailing" secondItem="yrn-j4-aB2" secondAttribute="trailing" constant="40" id="hOv-YU-Tzi"/>
+                        <constraint firstAttribute="bottom" secondItem="GTH-ar-NCL" secondAttribute="bottom" constant="15" id="lGy-cc-boF"/>
+                        <constraint firstItem="RHH-xY-3v9" firstAttribute="leading" secondItem="5V7-UO-WtF" secondAttribute="trailing" constant="20" id="n3D-yb-YGp"/>
+                        <constraint firstItem="5V7-UO-WtF" firstAttribute="height" secondItem="GTH-ar-NCL" secondAttribute="height" id="qYm-v7-dKI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxG-xU-2Y4" userLabel="中间View" customClass="DrawView">
+                    <rect key="frame" x="0.0" y="114" width="600" height="386"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="PTu-ED-ZEx" appends="YES" id="dd5-mr-h0M"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zV1-Wb-O9r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Erh-C4-2my"/>
+                <constraint firstAttribute="trailing" secondItem="VKv-jC-Yqd" secondAttribute="trailing" id="JbD-gn-3m1"/>
+                <constraint firstItem="VKv-jC-Yqd" firstAttribute="top" secondItem="mxG-xU-2Y4" secondAttribute="bottom" id="KbE-wA-fmd"/>
+                <constraint firstAttribute="trailing" secondItem="mxG-xU-2Y4" secondAttribute="trailing" id="PiH-fz-BKH"/>
+                <constraint firstAttribute="trailing" secondItem="zV1-Wb-O9r" secondAttribute="trailing" id="V8L-O1-nyf"/>
+                <constraint firstItem="mxG-xU-2Y4" firstAttribute="top" secondItem="zV1-Wb-O9r" secondAttribute="bottom" id="iPH-pm-T7Y"/>
+                <constraint firstItem="mxG-xU-2Y4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kBm-jy-w41"/>
+                <constraint firstItem="VKv-jC-Yqd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mZs-fT-yoe"/>
+                <constraint firstItem="zV1-Wb-O9r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="sBw-lO-PdO"/>
+                <constraint firstAttribute="bottom" secondItem="VKv-jC-Yqd" secondAttribute="bottom" id="y0Q-OJ-x2l"/>
+            </constraints>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="PTu-ED-ZEx">
+            <connections>
+                <action selector="pan:" destination="mxG-xU-2Y4" id="fFa-mn-7TN"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+</document>

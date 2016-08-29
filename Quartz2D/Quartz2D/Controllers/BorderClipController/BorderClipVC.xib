@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BorderClipVC">
+            <connections>
+                <outlet property="Img0" destination="FP2-ju-ITM" id="Yqc-ZO-enA"/>
+                <outlet property="Img1" destination="YE4-3q-CAa" id="ddF-qZ-axf"/>
+                <outlet property="Img2" destination="6G8-d7-xY3" id="Dls-Gn-579"/>
+                <outlet property="Img3" destination="I50-gk-u5v" id="3uj-o0-o2X"/>
+                <outlet property="Img4" destination="ANi-lh-0vu" id="RsX-Xg-OzM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-d7-xY3">
+                    <rect key="frame" x="40" y="300" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="KGO-i6-a5H"/>
+                        <constraint firstAttribute="width" constant="200" id="Rbv-MH-4ln"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-ju-ITM">
+                    <rect key="frame" x="40" y="100" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="IBI-lA-7t4"/>
+                        <constraint firstAttribute="width" constant="200" id="PVe-Vm-FLR"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I50-gk-u5v">
+                    <rect key="frame" x="360" y="300" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="cEm-su-GNW"/>
+                        <constraint firstAttribute="width" constant="200" id="zo5-P8-97E"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YE4-3q-CAa">
+                    <rect key="frame" x="360" y="100" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="CG5-1j-fGO"/>
+                        <constraint firstAttribute="height" constant="200" id="W7T-Qr-OnQ"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ANi-lh-0vu">
+                    <rect key="frame" x="200" y="200" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="1ik-Bx-pWQ"/>
+                        <constraint firstAttribute="height" constant="200" id="9Lj-zD-Two"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ANi-lh-0vu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7PK-8G-kl3"/>
+                <constraint firstAttribute="trailing" secondItem="YE4-3q-CAa" secondAttribute="trailing" constant="40" id="MLf-T7-9kR"/>
+                <constraint firstAttribute="bottom" secondItem="I50-gk-u5v" secondAttribute="bottom" constant="100" id="XmR-yY-S5b"/>
+                <constraint firstItem="ANi-lh-0vu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dxq-rK-ojC"/>
+                <constraint firstAttribute="bottom" secondItem="6G8-d7-xY3" secondAttribute="bottom" constant="100" id="j8n-IK-pEN"/>
+                <constraint firstItem="6G8-d7-xY3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="n74-Hb-lEj"/>
+                <constraint firstItem="FP2-ju-ITM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="o7g-me-7Ea"/>
+                <constraint firstItem="YE4-3q-CAa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="rMv-Yk-qS5"/>
+                <constraint firstItem="FP2-ju-ITM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="sCh-e7-LLY"/>
+                <constraint firstAttribute="trailing" secondItem="I50-gk-u5v" secondAttribute="trailing" constant="40" id="trd-hj-OLD"/>
+            </constraints>
+            <point key="canvasLocation" x="223" y="309"/>
+        </view>
+    </objects>
+</document>
